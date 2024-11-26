@@ -60,7 +60,7 @@ Before you begin, ensure you have the following installed on your development en
 ## Setting Up the Development Environment
 
 git clone https://github.com/prajay-dev/Uzeet.git
-cd ReactNativeExample
+cd Uzeet
 
 ### Build the Docker Image
 
