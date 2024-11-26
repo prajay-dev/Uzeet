@@ -59,7 +59,7 @@ Before you begin, ensure you have the following installed on your development en
 
 ## Setting Up the Development Environment
 
-git clone https://github.com/prajay-dev/indooratlas-20-11-2024.git
+git clone https://github.com/prajay-dev/Uzeet.git
 cd ReactNativeExample
 
 ### Build the Docker Image
