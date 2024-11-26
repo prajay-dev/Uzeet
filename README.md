@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
@@ -46,34 +46,62 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+# Uzeet App Development Guide using docker
 
-Now that you have successfully run the app, let's modify it.
+This guide explains how to set up and run the Uzeet React Native app demo using Docker.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Prerequisites
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+Before you begin, ensure you have the following installed on your development environment:
+• Docker: Install Docker from Docker’s official website.
+• React Native CLI: If you plan to interact with emulators or connected devices outside Docker.
+• Android Emulator/Device: Ensure you have an Android emulator or a physical device set up.
 
-## Congratulations! :tada:
+## Setting Up the Development Environment
 
-You've successfully run and modified your React Native App. :partying_face:
+git clone https://github.com/prajay-dev/indooratlas-20-11-2024.git
+cd ReactNativeExample
 
-### Now what?
+### Build the Docker Image
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+Use the provided Dockerfile to build a Docker image:
 
-# Troubleshooting
+    docker build -t uzeet-app .
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Run the Docker Container
 
-# Learn More
+Run the Docker container, mapping the necessary port:
 
-To learn more about React Native, take a look at the following resources:
+    docker run -it -p 8081:8081 --name uzeet-app-container uzeet-app
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This will start the Metro bundler on port 8081.
+
+### Running the App
+
+Android
+
+1. Open an Android emulator or connect a physical Android device.
+2. Inside the running container, execute the following command to build and run the Android app:
+
+   docker exec -it uzeet-app-container npx react-native run-android
+
+iOS
+
+1. Open Xcode and set up a simulator or connect a physical iOS device.
+2. Inside the running container, build the iOS app (if necessary):
+
+   docker exec -it uzeet-app-container npx react-native run-ios
+
+### Stopping the Metro Bundler
+
+To stop the Metro bundler and the Docker container, run:
+
+    docker stop uzeet-app-container
+    docker rm uzeet-app-container
+
+### Troubleshooting
+
+- If you encounter adb-related issues, ensure the Android emulator is running or the device is connected properly.
+- Verify that your local environment has the correct Android SDK and required dependencies for building React Native apps.
+- Ensure port 8081 is not already in use by another process.
+  """
