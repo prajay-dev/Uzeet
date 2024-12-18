@@ -97,8 +97,8 @@ If everything has been done correctly, you will be able to see the map with the 
 eg: IOS
 ![alt text](IMG_7922.PNG) ![alt text](IMG_7923.PNG)
 
-    Android:
-        ![alt text](android.PNG)
+Android:
+![alt text](android.PNG)
 
 ### Stopping the Metro Bundler
 
