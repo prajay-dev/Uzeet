@@ -1,6 +1,6 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# Getting Started (Uzeet app Integration Situm SDK Test)
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
@@ -42,13 +42,13 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+If everything is set up _correctly_ and you've connected your physical phone, you should see your new app running in your telephone correctly with the map integrated with Situm SDK.
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-# Uzeet App Development Guide using docker
+# Integration Situm SDK Test App Development Guide using docker
 
-This guide explains how to set up and run the Uzeet React Native app demo using Docker.
+This guide explains how to set up and run the Uzeet app with the Integration of Situm SDK using Docker.
 
 Prerequisites
 
@@ -91,6 +91,13 @@ iOS
 2. Inside the running container, build the iOS app (if necessary):
 
    docker exec -it uzeet-app-container npx react-native run-ios
+
+If everything has been done correctly, you will be able to see the map with the integrated POIs on the map and even simulate way finding between them. Please note that if you are not at the actual location, you will not be able to see your current location.
+
+eg: IOS
+![alt text](IMG_7922.PNG) ![alt text](IMG_7923.PNG)
+
+    Android: /Users/prajaychaudhary/Downloads/WhatsApp Image 2024-12-18 at 16.59.03.jpeg
 
 ### Stopping the Metro Bundler
 
