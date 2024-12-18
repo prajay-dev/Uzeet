@@ -98,7 +98,7 @@ eg: IOS
 ![alt text](IMG_7922.PNG) ![alt text](IMG_7923.PNG)
 
 Android:
-![alt text](android.PNG)
+https://res.cloudinary.com/dhvmmjasb/image/upload/v1734538689/Screenshot_2024-12-18_at_17.13.57_tnlw3h.jpg
 
 ### Stopping the Metro Bundler
 
