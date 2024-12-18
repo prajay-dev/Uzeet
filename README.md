@@ -97,7 +97,8 @@ If everything has been done correctly, you will be able to see the map with the 
 eg: IOS
 ![alt text](IMG_7922.PNG) ![alt text](IMG_7923.PNG)
 
-    Android: /Users/prajaychaudhary/Downloads/WhatsApp Image 2024-12-18 at 16.59.03.jpeg
+    Android:
+        ![alt text](android.PNG)
 
 ### Stopping the Metro Bundler
 
